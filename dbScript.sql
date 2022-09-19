@@ -4,3 +4,9 @@ CREATE DATABASE `spring_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_genera
 CREATE USER 'spring_user'@'localhost' IDENTIFIED BY 'spring_pwd';
 GRANT ALL ON `spring_db` . * TO 'spring_user'@'localhost' IDENTIFIED BY 'spring_pwd';
 USE `spring_db`
+
+
+DROP DATABASE IF EXISTS `spring_db_prod`;
+CREATE DATABASE `spring_db_prod` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+GRANT ALL ON `spring_db_prod` . * TO 'spring_user'@'localhost' IDENTIFIED BY 'spring_pwd';
+USE `spring_db_prod`
